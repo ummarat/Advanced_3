@@ -7,7 +7,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        File file = new File("src\\Advanced_io_nio\\text.txt");
+        File file = new File("text.txt");
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(file));
              BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -19,7 +19,7 @@ public class Main {
             }
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.printf(e.getMessage());
         }
     }
 }
